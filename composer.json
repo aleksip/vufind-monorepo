@@ -94,7 +94,8 @@
         "phpstan/phpstan": "1.2.0",
         "phpunit/phpunit": "9.5.10",
         "sebastian/phpcpd": "6.0.3",
-        "squizlabs/php_codesniffer": "3.6.2"
+        "squizlabs/php_codesniffer": "3.6.2",
+        "symplify/monorepo-builder": "^10.0"
     },
     "replace": {
         "laminas/laminas-cache-storage-adapter-apc": "*",
@@ -102,7 +103,8 @@
         "laminas/laminas-cache-storage-adapter-memcache": "*",
         "laminas/laminas-cache-storage-adapter-mongodb": "*",
         "laminas/laminas-cache-storage-adapter-wincache": "*",
-        "laminas/laminas-cache-storage-adapter-xcache": "*"
+        "laminas/laminas-cache-storage-adapter-xcache": "*",
+        "vufind/vufind-theme": "self.version"
     },
     "extra": {
         "merge-plugin": {
@@ -119,7 +121,10 @@
         }
     },
     "scripts": {
-        "phing-install-dependencies": ["phing patch-dependencies", "phing installsolr installswaggerui"],
+        "phing-install-dependencies": [
+            "phing patch-dependencies",
+            "phing installsolr installswaggerui"
+        ],
         "post-install-cmd": "@phing-install-dependencies",
         "post-update-cmd": "@phing-install-dependencies",
         "qa": "phing qa-console"
