@@ -118,7 +118,7 @@
         "process-timeout": 0
     },
     "replace": {
-        "vufind/vufind-theme": "7.1.4"
+        "vufind/vufind-theme": "7.1.5"
     },
     "extra": {
         "merge-plugin": {
